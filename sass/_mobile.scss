@@ -1,0 +1,16 @@
+@mixin list-mobile-hover-display($main-height, $height1, $height2, $customAnimation, $time) {
+    height: $main-height;
+    animation: $customAnimation $time;
+
+    @keyframes customAnimation {
+        from {
+            height: $height1;
+        }
+
+        to {
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            height: $height2;
+        }
+    }
+}

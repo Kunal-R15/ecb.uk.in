@@ -1,0 +1,18 @@
+@mixin list-hover-display($main-width, $width1, $width2, $customAnimation, $time) {
+    width: $main-width;
+    animation: $customAnimation $time;
+    -webkit-animation: $customAnimation $time;
+
+    @keyframes customAnimation {
+        from {
+            width: $width1;
+        }
+
+        to {
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            width: $width2;
+        }
+    }
+}
